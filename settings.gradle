@@ -1,0 +1,4 @@
+include 'main_application', 'ai_control', 'ai_implementationA', 'ai_implementationB', 'ai_implementationJNIC'
+rootProject.name = 'SECassignment2019'
+
+

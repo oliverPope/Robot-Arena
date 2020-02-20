@@ -1,0 +1,32 @@
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':ai_control')
+    implementation project(':ai_implementationA')
+    implementation project(':ai_implementationB')
+    implementation project(':ai_implementationJNIC')
+
+}
+
+
+
+mainClassName = 'Main'
+
+jar {
+    manifest {
+        attributes "Main-Class": "Main"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+

@@ -1,0 +1,1 @@
+void *start(jobject rc);

@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'c'
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':ai_control')
+}
+
+model {
+    components {
+        aiC(NativeLibrarySpec)
+
+    }
+}
+
